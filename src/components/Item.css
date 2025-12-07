@@ -59,6 +59,7 @@
   font-size: 0.95rem;
   line-height: 1.4;
   min-height: 48px;
+  min-height: 60px;
 }
 
 /* ===== CENA ===== */
@@ -67,6 +68,26 @@
   font-size: 1.2rem;
   color: #111;
   margin-top: auto;
+}
+
+.buyBtn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0;
+
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.buyBtn:hover {
+  background: #111;
 }
 
 /* ===== LINK OBAL ===== */

@@ -63,7 +63,7 @@ const App = () => {
         </Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Item />} />
+        <Route path="/" element={<Item addToCart={addToCart} />} />
         <Route path="/item/:id" element={<OneItem addToCart={addToCart} />} />
         <Route
           path="/cart"
