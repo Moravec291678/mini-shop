@@ -16,6 +16,8 @@ const OneItem = (props) => {
     setItem(found);
   }, [id]);
 
+
+
   return (
     <div className="oneItemPre">
       <h1>{item.name}</h1>
@@ -26,7 +28,14 @@ const OneItem = (props) => {
         <Link className="linkBackPre" to="/">
           Zpet
         </Link>
-        <button onClick={()=>{props.addToCart(item)}} className="oneItemBtnPre">Koupit</button>
+        <button
+          onClick={() => {
+            props.addToCart(item);
+          }}
+          className="oneItemBtnPre"
+        >
+          Koupit
+        </button>
       </div>
     </div>
   );
