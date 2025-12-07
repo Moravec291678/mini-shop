@@ -1,0 +1,106 @@
+/* ===== HLAVNÍ KONTEJNER DETAILU ===== */
+.oneItemPre {
+  width: 100%;
+  min-height: calc(98vh - 60px); /* minus navbar */
+  padding: 20px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  background: #ffffff;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Jemná animace náhledu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== TITULEK ===== */
+.oneItemPre h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #222;
+  text-align: center;
+}
+
+/* ===== OBRÁZEK ===== */
+.oneItemImgPre {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== POPIS ===== */
+.oneItemDescPre {
+  max-width: 900px;
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===== CENA ===== */
+.oneItemPricePre {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  margin-top: 10px;
+}
+
+.oneItemButtonsPre {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== TLAČÍTKO KOUPIT ===== */
+.oneItemBtnPre {
+  padding: 14px 40px;
+  background: #ff7a00;
+  color: #fff;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.oneItemBtnPre:hover {
+  background: #e06600;
+  transform: translateY(-3px);
+}
+
+.oneItemBtnPre:active {
+  transform: translateY(-1px);
+}
+
+/* ===== ODKAZ ZPĚT ===== */
+.linkBackPre {
+  margin-top: 14px;
+  font-size: 1.1rem;
+  color: #555;
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+.linkBackPre:hover {
+  color: #000;
+}

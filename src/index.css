@@ -1,0 +1,52 @@
+body,* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  width: 100%;
+  padding: 16px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.cartImg {
+  width: 30px;
+}
+
+/* ===== HOME LINK ===== */
+.home {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+
+  padding: 8px 16px;
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+}
+
+/* Hover efekt */
+.home:hover {
+  background: #f0f0f0;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Aktivní vzhled při kliknutí */
+.home:active {
+  transform: translateY(0px);
+}
