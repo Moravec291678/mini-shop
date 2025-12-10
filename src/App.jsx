@@ -62,7 +62,14 @@ const App = () => {
   return (
     <>
       <nav>
-        <Link className="home" to="/">
+        <Link
+          onClick={() => {
+            setSearchText("");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="home"
+          to="/"
+        >
           Home
         </Link>
         <input
