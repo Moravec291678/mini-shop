@@ -52,6 +52,10 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
+
+  const deleteAllCart = () => {
+    setCartItems([]);
+  };
   return (
     <>
       <nav>
@@ -60,6 +64,9 @@ const App = () => {
         </Link>
         <Link className="cart" to="/cart">
           <img className="cartImg" src={cartImg} alt="Cart" />
+          <span className="cartCount">
+            {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
+          </span>
         </Link>
       </nav>
       <Routes>
@@ -72,6 +79,7 @@ const App = () => {
               cartItems={cartItems}
               increaseQuantity={increaseQuantity}
               decreaseQuantity={decreaseQuantity}
+              deleteAllCart={deleteAllCart}
             />
           }
         />

@@ -5,7 +5,6 @@ const Cart = (props) => {
     return total + item.price * item.quantity;
   }, 0);
 
-
   return (
     <div className="cartWrapper">
       {props.cartItems.map((element) => {
@@ -20,13 +19,36 @@ const Cart = (props) => {
             </p>
 
             <div className="quantity">
-              <button onClick={() => {props.decreaseQuantity(element.id)}} className="minus">-</button>
+              <button
+                onClick={() => {
+                  props.decreaseQuantity(element.id);
+                }}
+                className="minus"
+              >
+                -
+              </button>
               <p>{element.quantity}</p>
-              <button onClick={() => {props.increaseQuantity(element.id)}} className="plus">+</button>
+              <button
+                onClick={() => {
+                  props.increaseQuantity(element.id);
+                }}
+                className="plus"
+              >
+                +
+              </button>
             </div>
           </div>
         );
       })}
+      <div className="buttons">
+        <button
+          onClick={props.deleteAllCart}
+          className="cartDeleteAll"
+        >
+          Smazat košík
+        </button>
+        <button className="cartOrder">Objednat</button>
+      </div>
 
       <p className="totalPrice">Celkem: {totalPrice},- Kč</p>
     </div>
