@@ -13,18 +13,15 @@ body {
 
 /* Navigace */
 nav {
-  width: 100%;
-  background: #ffffff;
-  padding: 15px 25px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: white;
+  padding: 12px 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 50;
 }
 
 nav a {
@@ -38,25 +35,31 @@ nav a:hover {
   opacity: 0.7;
 }
 
+/* === SEARCH INPUT === */
 .search {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  width: 200px;
-  transition: border-color 0.3s;
-}
+  width: 280px;
+  padding: 10px 14px;
 
-.search:focus {
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+
+  transition: all 0.25s ease-in-out;
   outline: none;
-  border-color: #888;
-}
-.search::placeholder {
-  color: #aaa;
+
+  background: #f7f7f7;
 }
 
-.search:hover {
-  border-color: #888;
+/* Fokus efekt */
+.search:focus {
+  border-color: #333;
+  background: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder styl */
+.search::placeholder {
+  color: #999;
 }
 
 .cart {
@@ -108,3 +111,24 @@ nav a:hover {
     text-align: center;
   }
 }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .search {
+    width: 180px;
+    
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .search {
+    width: 100%;
+    order: 3;
+  }
+}
+/* ===== END INDEX.CSS ===== */
