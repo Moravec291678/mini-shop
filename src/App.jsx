@@ -4,8 +4,10 @@ import OneItem from "./components/OneItem";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Cart from "./components/Cart";
 import cartImg from "./images/cart.png";
+import Categories from "./components/Categories";
 
 const App = () => {
+  const [category, setCategory] = useState("all");
   const [cartItems, setCartItems] = useState(() => {
     const saved = localStorage.getItem("cart");
     return saved ? JSON.parse(saved) : [];
@@ -86,10 +88,18 @@ const App = () => {
           </span>
         </Link>
       </nav>
+      <Categories category={category} setCategory={setCategory} />
       <Routes>
         <Route
           path="/"
-          element={<Item addToCart={addToCart} searchText={searchText} />}
+          element={
+            <Item
+              addToCart={addToCart}
+              searchText={searchText}
+              category={category}
+              setCategory={setCategory}
+            />
+          }
         />
         <Route path="/item/:id" element={<OneItem addToCart={addToCart} />} />
         <Route

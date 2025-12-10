@@ -4,17 +4,19 @@ import "./Item.css";
 import { useState } from "react";
 
 const Item = (props) => {
-  const { searchText } = props;
+  const { addToCart, searchText, category } = props;
   const [visibleCount, setVisibleCount] = useState(12);
   const loadMore = () => {
     setVisibleCount((prevCount) => prevCount + 12);
   };
 
-  const filteredData = data.filter(
-    (item) =>
-      item.name.toLowerCase().includes(searchText.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchText.toLowerCase())
-  );
+  const filteredData = data
+    .filter(
+      (item) =>
+        item.name.toLowerCase().includes(searchText.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchText.toLowerCase())
+    )
+    .filter((item) => (category === "all" ? true : item.category === category));
   return (
     <>
       <section className="section">
