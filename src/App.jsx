@@ -49,19 +49,29 @@ const App = () => {
     setCartItems(updatedCart);
   };
 
+  const deleteAllCart = () => {
+    setCartItems([]);
+  };
+
+  const [searchText, setSearchText] = useState("");
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const deleteAllCart = () => {
-    setCartItems([]);
-  };
   return (
     <>
       <nav>
         <Link className="home" to="/">
           Home
         </Link>
+        <input
+          className="search"
+          type="text"
+          placeholder="Hledat..."
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
         <Link className="cart" to="/cart">
           <img className="cartImg" src={cartImg} alt="Cart" />
           <span className="cartCount">
@@ -70,7 +80,10 @@ const App = () => {
         </Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Item addToCart={addToCart} />} />
+        <Route
+          path="/"
+          element={<Item addToCart={addToCart} searchText={searchText} />}
+        />
         <Route path="/item/:id" element={<OneItem addToCart={addToCart} />} />
         <Route
           path="/cart"

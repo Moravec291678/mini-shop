@@ -4,14 +4,21 @@ import "./Item.css";
 import { useState } from "react";
 
 const Item = (props) => {
-  const [visibleCount, setVisibleCount] = useState(10);
+  const { searchText } = props;
+  const [visibleCount, setVisibleCount] = useState(12);
   const loadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 10);
+    setVisibleCount((prevCount) => prevCount + 12);
   };
+
+  const filteredData = data.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchText.toLowerCase())
+  );
   return (
     <>
       <section className="section">
-        {data.slice(0, visibleCount).map((item) => {
+        {filteredData.slice(0, visibleCount).map((item) => {
           return (
             <Link to={`/item/${item.id}`} key={item.id}>
               <div className="oneItem">
@@ -33,13 +40,14 @@ const Item = (props) => {
           );
         })}
       </section>
-      {visibleCount < data.length && (
-        <div className="loadMoreWrapper">
-          <button onClick={loadMore} className="loadMoreBtn">
-            Načíst více
-          </button>
-        </div>
-      )}
+      {visibleCount < data.length &&
+        (filteredData.length === 0 ? null : (
+          <div className="loadMoreWrapper">
+            <button onClick={loadMore} className="loadMoreBtn">
+              Načíst více
+            </button>
+          </div>
+        ))}
     </>
   );
 };
