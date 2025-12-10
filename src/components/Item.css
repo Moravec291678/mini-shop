@@ -90,6 +90,28 @@
   background: #111;
 }
 
+.loadMoreWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.loadMoreBtn {
+  padding: 12px 24px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.loadMoreBtn:hover {
+  background-color: #111;
+}
 /* ===== LINK OBAL ===== */
 .section a {
   text-decoration: none;
