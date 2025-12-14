@@ -79,6 +79,8 @@ This project was created as a learning and portfolio project to demonstrate prac
 
 ---
 
+Live Demo: https://mini-shop-alpha.vercel.app/
+
 ## How to Run Locally
 
 ```bash
