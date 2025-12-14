@@ -1,16 +1,90 @@
-# React + Vite
+# Mini Shop (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini Shop is a simple e-commerce web application built with React.  
+The project focuses on core frontend concepts such as state management, component composition, routing, and basic user interactions typical for real-world applications.
 
-Currently, two official plugins are available:
+This project was created as a learning and portfolio project to demonstrate practical React knowledge.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### DONE
 
-## Expanding the ESLint configuration
+- Product listing with pagination ("Load more" functionality)
+- Product detail page
+- Shopping cart functionality
+- Add/remove products from cart
+- Increase/decrease product quantity
+- Cart total price calculation
+- Cart persistence using Local Storage
+- Search products by name and description
+- Category-based product filtering
+- Responsive layout
+- Client-side routing with React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### TODO / Possible Extensions
+
+- User authentication
+- Checkout form validation
+- Order summary page
+- Backend API integration
+- Sorting products (price, name)
+- UI animations and transitions
+
+---
+
+## Tech Stack
+
+- JavaScript (ES6+)
+- React
+- React Router
+- HTML5
+- CSS3 (Flexbox)
+- Local Storage
+- Vite
+
+---
+
+## What This Project Demonstrates
+
+- Working with React functional components
+- State management using `useState` and `useEffect`
+- Lifting state up and passing props between components
+- Conditional rendering
+- List rendering and array methods (`map`, `filter`, `reduce`)
+- Client-side routing
+- Persisting application state with Local Storage
+- Basic UX patterns used in e-commerce applications
+
+---
+
+## Screenshots
+
+### Home page
+
+![Home page](screenshots/home.png)
+
+### Product detail
+
+![Product detail](screenshots/product-detail.png)
+
+### Cart
+
+![Cart](screenshots/cart.png)
+
+### Mobile view
+
+![Mobile view](screenshots/mobile.png)
+
+---
+
+## How to Run Locally
+
+```bash
+git clone https://github.com/your-username/mini-shop.git
+cd mini-shop
+npm install
+npm run dev
+```
+
